@@ -1,11 +1,11 @@
-class Song 
-  attr_accessor :name, :artist 
+class Post 
+  attr_accessor :title, :author
   
   @@all = []
 
-  def initialize(name, artist = nil)
-    @name = name 
-    @artist = artist 
+  def initialize(title, author = nil)
+    @title = title 
+    @author = author 
     @@all << self 
   end 
   
@@ -13,9 +13,9 @@ class Song
     @@all 
   end 
   
-  def artist_name 
-    if  self.artist
-     self.artist.name 
+  def author_name 
+    if  self.author
+     self.author.name 
     else 
        nil 
     end 
